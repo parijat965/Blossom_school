@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Programs – Blossom School</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body class="font-sans text-gray-700">
+    <div
+      id="page-loader"
+      class="fixed inset-0 z-50 bg-white flex items-center justify-center transition-opacity duration-500"
+    >
+      <div
+        class="w-16 h-16 border-4 border-pink-500 border-dashed rounded-full animate-spin"
+      ></div>
+    </div>
+    <!-- Navbar -->
+    <header class="bg-white shadow sticky top-0 z-50" x-data="{ open: false }">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="flex items-center space-x-2 text-pink-500 hover:text-pink-600 transition duration-300"
+        >
+          <img
+            src="assets/images/logo.jpeg"
+            alt="Logo"
+            class="h-14 w-14 object-contain"
+          />
+          <span class="text-xl md:text-2xl font-bold">Blossom School</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="programs.html" class="nav-link">Programs</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Hamburger Button -->
+        <button
+          @click="open = !open"
+          class="md:hidden text-pink-500 hover:text-pink-600 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        x-show="open"
+        x-transition
+        class="md:hidden bg-white border-t border-gray-200 px-4 pb-4"
+      >
+        <a href="index.html" class="block py-2 nav-link-mobile">Home</a>
+        <a href="about.html" class="block py-2 nav-link-mobile">About</a>
+        <a href="programs.html" class="block py-2 nav-link-mobile">Programs</a>
+        <a href="events.html" class="block py-2 nav-link-mobile">Events</a>
+        <a href="contact.html" class="block py-2 nav-link-mobile">Contact</a>
+      </div>
+    </header>
+    <!-- Programs Introduction -->
+    <section class="py-16 bg-pink-50 text-center">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-pink-600 mb-4">Our Programs</h2>
+        <p class="max-w-2xl mx-auto text-gray-700">
+          We offer a thoughtful curriculum tailored to each stage of a child’s
+          early years—from playful learning in Nursery to strong academic
+          foundations in Class 4.
+        </p>
+      </div>
+    </section>
+
+    <!-- Program Cards -->
+    <section class="py-12 bg-white">
+      <div
+        class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <!-- Nursery -->
+        <div class="bg-pink-100 p-6 rounded shadow text-center">
+          <h3 class="text-xl font-bold text-pink-600 mb-2">Nursery</h3>
+          <p class="text-gray-700">
+            Focus on play, creativity, and sensory development in a caring and
+            joyful environment.
+          </p>
+        </div>
+
+        <!-- LKG -->
+        <div class="bg-pink-100 p-6 rounded shadow text-center">
+          <h3 class="text-xl font-bold text-pink-600 mb-2">
+            Lower Kindergarten (LKG)
+          </h3>
+          <p class="text-gray-700">
+            Introduction to letters, numbers, and social skills with playful
+            learning.
+          </p>
+        </div>
+
+        <!-- UKG -->
+        <div class="bg-pink-100 p-6 rounded shadow text-center">
+          <h3 class="text-xl font-bold text-pink-600 mb-2">
+            Upper Kindergarten (UKG)
+          </h3>
+          <p class="text-gray-700">
+            Building early literacy and numeracy skills with structured
+            activities and games.
+          </p>
+        </div>
+
+        <!-- Class 1 -->
+        <div class="bg-pink-100 p-6 rounded shadow text-center">
+          <h3 class="text-xl font-bold text-pink-600 mb-2">Class 1</h3>
+          <p class="text-gray-700">
+            Introduction to formal education with focus on core subjects and
+            communication skills.
+          </p>
+        </div>
+
+        <!-- Class 2 -->
+        <div class="bg-pink-100 p-6 rounded shadow text-center">
+          <h3 class="text-xl font-bold text-pink-600 mb-2">Class 2</h3>
+          <p class="text-gray-700">
+            Enhanced literacy, math, and activity-based science with values and
+            teamwork.
+          </p>
+        </div>
+
+        <!-- Class 3 & 4 -->
+        <div class="bg-pink-100 p-6 rounded shadow text-center">
+          <h3 class="text-xl font-bold text-pink-600 mb-2">Class 3 & 4</h3>
+          <p class="text-gray-700">
+            Strengthening academic concepts, reading, writing, and public
+            speaking with creativity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-pink-50 text-center">
+      <div class="container mx-auto px-4">
+        <h3 class="text-xl font-semibold text-pink-600 mb-2">
+          See the School in Action!
+        </h3>
+        <p class="mb-4 text-gray-600">
+          Visit us or schedule a school tour to learn more about our programs.
+        </p>
+        <a
+          href="contact.html"
+          class="bg-pink-500 text-white px-6 py-2 rounded hover:bg-pink-600 transition"
+          >Contact Us</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-100 py-6 text-center">
+      <p class="text-gray-600">
+        &copy; 2025 Blossom School. All rights reserved.
+      </p>
+    </footer>
+    <script src="assets/js/loader.js"></script>
+  </body>
+</html>

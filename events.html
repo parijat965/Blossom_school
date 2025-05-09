@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events – Blossom School</title>
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="styles.css" rel="stylesheet" />
+
+
+</head>
+<body class="font-sans text-gray-700">
+    <div
+    id="page-loader"
+    class="fixed inset-0 z-50 bg-white flex items-center justify-center transition-opacity duration-500"
+  >
+    <div
+      class="w-16 h-16 border-4 border-pink-500 border-dashed rounded-full animate-spin"
+    ></div>
+  </div>
+  <!-- Navbar -->
+  <header class="bg-white shadow sticky top-0 z-50" x-data="{ open: false }">
+    <div
+      class="container mx-auto px-4 py-4 flex justify-between items-center"
+    >
+      <!-- Logo -->
+      <a
+        href="index.html"
+        class="flex items-center space-x-2 text-pink-500 hover:text-pink-600 transition duration-300"
+      >
+        <img
+          src="assets/images/logo.jpeg"
+          alt="Logo"
+          class="h-14 w-14 object-contain"
+        />
+        <span class="text-xl md:text-2xl font-bold">Blossom School</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="programs.html" class="nav-link">Programs</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Hamburger Button -->
+      <button
+        @click="open = !open"
+        class="md:hidden text-pink-500 hover:text-pink-600 focus:outline-none"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div
+      x-show="open"
+      x-transition
+      class="md:hidden bg-white border-t border-gray-200 px-4 pb-4"
+    >
+      <a href="index.html" class="block py-2 nav-link-mobile">Home</a>
+      <a href="about.html" class="block py-2 nav-link-mobile">About</a>
+      <a href="programs.html" class="block py-2 nav-link-mobile">Programs</a>
+      <a href="events.html" class="block py-2 nav-link-mobile">Events</a>
+      <a href="contact.html" class="block py-2 nav-link-mobile">Contact</a>
+    </div>
+  </header>
+
+  <!-- Events Introduction -->
+  <section class="py-16 bg-pink-50 text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-pink-600 mb-4">Our School Events</h2>
+      <p class="max-w-2xl mx-auto text-gray-700">
+        At Blossom School, we celebrate learning with fun and engaging activities throughout the year.
+        Here are some of our past and upcoming events!
+      </p>
+    </div>
+  </section>
+
+  <!-- Event Cards -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Event 1 -->
+      <div class="bg-pink-100 p-6 rounded shadow">
+        <h3 class="text-xl font-bold text-pink-600 mb-2">Annual Day Celebration</h3>
+        <p class="text-gray-700 mb-2">📅 March 10, 2025</p>
+        <p class="text-gray-600">
+          A colorful day full of performances, dances, songs, and award ceremonies showcasing student talent.
+        </p>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="bg-pink-100 p-6 rounded shadow">
+        <h3 class="text-xl font-bold text-pink-600 mb-2">Sports Day</h3>
+        <p class="text-gray-700 mb-2">📅 January 20, 2025</p>
+        <p class="text-gray-600">
+          Fun games, races, and activities promoting fitness and teamwork among kids of all classes.
+        </p>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="bg-pink-100 p-6 rounded shadow">
+        <h3 class="text-xl font-bold text-pink-600 mb-2">Grandparents Day</h3>
+        <p class="text-gray-700 mb-2">📅 December 15, 2024</p>
+        <p class="text-gray-600">
+          A heartwarming day where children perform for their grandparents and spend quality time together.
+        </p>
+      </div>
+
+      <!-- Event 4 -->
+      <div class="bg-pink-100 p-6 rounded shadow">
+        <h3 class="text-xl font-bold text-pink-600 mb-2">Diwali Craft Fair</h3>
+        <p class="text-gray-700 mb-2">📅 October 30, 2024</p>
+        <p class="text-gray-600">
+          Students showcase handmade Diwali decorations and crafts—learning through culture and creativity.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-pink-50 text-center">
+    <div class="container mx-auto px-4">
+      <h3 class="text-xl font-semibold text-pink-600 mb-2">Want to Participate?</h3>
+      <p class="mb-4 text-gray-600">Get in touch to learn more about how your child can be part of our next event.</p>
+      <a href="contact.html" class="bg-pink-500 text-white px-6 py-2 rounded hover:bg-pink-600 transition">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-pink-100 py-6 text-center">
+    <p class="text-gray-600">&copy; 2025 Blossom School. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/loader.js"></script>
+</body>
+</html>
